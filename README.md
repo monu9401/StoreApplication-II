@@ -9,11 +9,11 @@ This application is developed using Spring Boot and details of all products are 
 
 Anyone who wishes to use this application must follow the following steps:
 
-Clone this repository in your local.
-Import the project folder into any one of the following IDE: Eclipse/IntelliJ/NetBeans/SpringToolSuite/VS Code.
-Make sure Tomcat Server is installed on the IDE.
-Run an instance of MySQL with the username "root". Make sure the password of the MySQL instance is "password1".
-Create a database named "demo" in the same instance.
-Build the project using Maven.
-Run the project on the Tomcat Server. By default, it should run on port: 8888.
-Access the application on the browser with the following link: http://localhost:8888.
+1. Clone this repository in your local.
+2. Import the project folder into any one of the following IDE: Eclipse/IntelliJ/NetBeans/SpringToolSuite/VS Code.
+3. Make sure Tomcat Server is installed on the IDE.
+4. Run an instance of MySQL with the username "root". Make sure the password of the MySQL instance is "password1".
+5. Create a database named "demo" in the same instance.
+6. Build the project using Maven.
+7. Run the project on the Tomcat Server. By default, it should run on port: 8888.
+8. Access the application on the browser with the following link: http://localhost:8888.
