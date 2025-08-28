@@ -1,7 +1,7 @@
 # StoreApplication-II
 An application to manage products available in the store(with new tech stack).
 
-Tech Stack: Java, Spring Boot, REST APIs, Thymeleaf, JPA, HTML, CSS
+Tech Stack: Java, Spring Boot, REST APIs, Spring MVC, Thymeleaf, JPA, HTML, CSS
 
 This application has a main window, where all products available in the store are listed. Next to every product, there are two action buttons: update and delete. The update button opens a new window, where user can update the details of the product. The delete button deletes the product. At the bottom of the main window, is another button to insert a new product. This button opens a new window to specify the details of the new product.
 
