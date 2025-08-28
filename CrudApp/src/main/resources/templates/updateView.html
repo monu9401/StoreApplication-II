@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update Product</title>
+<style>
+	body{
+	    margin-left: 100px;
+	    margin-right: 100px;
+	    text-align: center;
+	    padding: 25px;
+	    background-color: rgb(67 69 82);
+	}
+	h1{
+	    color: rgba(211, 168, 212, 0.822);
+	    text-align: left;
+	    margin-left: 160px;
+	}
+	form{
+	    font-size: 1.3em;
+	    color:rgb(224, 99, 9);
+	    border: 1px solid black;
+	    width:500px;
+	    background-color: rgb(180, 231, 238);
+	}
+	label{
+	    font-weight: bold;
+	}
+	button{
+	    background-color: rgb(7, 190, 7);
+	    height: 35px;
+	    width: 140px;
+	    border-radius: 8px;
+	    cursor: pointer;
+	    font-weight: bold;
+	}
+	button:hover{
+	    background-color: rgb(0, 100, 30);
+	}
+	textarea{
+	    height: 100px;
+	    width: 350px;
+	    background-color: rgb(142, 240, 158);
+	}
+	input{
+	    background-color: rgb(142, 240, 158);
+	}
+</style>
+</head>
+<body>
+	<h1>Update Product</h1>
+    <form action="/updateData" method="post">
+        <label>Id</label><br>
+        <input type="number" name="id" th:value="${id}">
+        <br>
+        <br>
+        <label>Name</label><br>
+        <input type="text" name="name" th:value="${name}">
+        <br><br>
+        <label>Description</label><br>
+        <textarea name="description" th:text="${description}"></textarea>
+        <br><br>
+        <label>Price</label><br>
+        <input type="number" name="price" th:value="${price}">
+        <br><br>
+        <button type="submit">Update Product</button>
+        <br><br>
+    </form>
+</body>
+</html>

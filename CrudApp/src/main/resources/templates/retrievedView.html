@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Products</title>
+<style>
+	body{
+		background-image: url("/images/myImage.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	h2{
+		margin-left: 540px;
+		color: white;
+	}
+	th{
+	    text-align: left;
+	}
+	table{
+	    border: 1px solid;
+	    margin-left: 200px;
+	    color: rgb(255, 255, 255);
+	    background-color: rgb(192, 47, 22);
+	    font-weight: bold;
+	    font-size: 1.2em;
+	    border-radius: 10px;
+	    padding: 5px;
+	}
+	button{
+	    border-radius: 5px;
+	    font-weight: bold;
+	    background-color: aqua;
+	    cursor: pointer;
+	}
+	button:hover{
+	    background-color: green;
+	}
+	#addButton{
+	    background-color: rgb(129, 179, 11);
+	    width: 150px;
+	    height: 50px;
+	    border-radius: 12px;
+	    margin-left: 590px;
+	    cursor: pointer;
+	}
+	#addButton:hover{
+    	background-color: rgb(21, 116, 21);
+	}
+</style>
+</head>
+<body>
+	<h2>Welcome to Product App</h2>
+	<table>
+		<thead>
+			<tr>
+				<td width="100px">Id</td>
+				<td width="200px">Name</td>
+				<td width="300px">Description</td>
+				<td width="100px">Price</td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+		</thead>
+		<tbody th:each="p : ${list}">
+			<tr>
+				<td width="100px" th:text="${p.getId()}"></td>
+				<td width="200px" th:text="${p.getName()}"></td>
+				<td width="300px" th:text="${p.getDescription()}"></td>
+				<td width="100px" th:text="${p.getPrice()}"></td>
+				<form th:action="@{'/update/' +${p.getId()}+ '/' +${p.getName()}+ '/' +${p.getDescription()}+ '/' +${p.getPrice()}}" method="post">
+					<td width="100px"><button type="submit">Update</button></td>
+				</form>
+				<form th:action="@{'/delete/' +${p.getId()}}" method="post">
+					<td width="70px"><button type="submit">Delete</button></td>
+				</form>
+			</tr>
+		</tbody>
+	</table>
+	<br><br><br>
+	<form action="/insert" method="post">
+		<button id="addButton" type="submit">Add new Product</button>
+	</form>
+</body>
+</html>
